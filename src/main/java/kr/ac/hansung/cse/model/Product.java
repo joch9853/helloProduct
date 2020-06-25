@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,6 +19,7 @@ import lombok.ToString;
 @Setter
 @ToString
 @NoArgsConstructor
+@Table(name = "productTable")
 public class Product  implements Serializable{/**
 	 * 
 	 */
@@ -35,7 +37,7 @@ public class Product  implements Serializable{/**
 	
 	private String manufacturer;
 	
-	@Column(name = "unit_in_stock")
+	//@Column(name = "unit_in_stock")
 	private int unitInStock;
 	
 	private String description;
