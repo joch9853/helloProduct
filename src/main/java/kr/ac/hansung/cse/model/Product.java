@@ -37,7 +37,6 @@ public class Product  implements Serializable{/**
 	
 	private String manufacturer;
 	
-	//@Column(name = "unit_in_stock")
 	private int unitInStock;
 	
 	private String description;
