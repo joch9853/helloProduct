@@ -83,7 +83,7 @@ public class ProductController {
 	}
 	
 	@PutMapping("/products/{id}")
-	public ResponseEntity<Product> updateCustomer(@PathVariable("id") int id, @RequestBody Product product) {
+	public ResponseEntity<Product> updateProduct(@PathVariable("id") int id, @RequestBody Product product) {
 		Optional<Product> productData = repository.findById(id);
 
 		if (productData.isPresent()) {
@@ -102,7 +102,7 @@ public class ProductController {
 	}
 	
 	@DeleteMapping("/products/{id}")
-	public ResponseEntity<HttpStatus> deleteCustomer(@PathVariable("id") int id) {
+	public ResponseEntity<HttpStatus> deleteProduct(@PathVariable("id") int id) {
 		try {
 			repository.deleteById(id);
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
